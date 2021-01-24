@@ -1,3 +1,8 @@
+body {
+  font-size: 1.1rem;
+  background: url("./whitediamond.png") no-repeat center center/cover;
+}
+
 #city-input,
 #weather-output {
   max-width: 400px;
