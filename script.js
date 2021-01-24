@@ -1,17 +1,17 @@
-const myPomise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve({
-      firstName: "Sadam",
-      secondName: "Arbaa",
-    });
-  }, 1000);
-  // reject("some then went Wrong");
-});
-
-myPomise
-  .then((respone) => {
-    console.log(`Here is the respone after one second respone`);
-    console.log(respone);
+const userPromise = fetch("https://randomuser.me/api/");
+// console.log(userPromise);
+userPromise
+  .then((response) => {
+    return response.json();
   })
-  .catch((error) => console.log(error));
-console.log("this run now");
+  .then((data) => {
+    console.log(data);
+    // data.results.forEach((element) => {
+    //   // console.log(element.name);
+    // });
+    // console.log(data.results[0].name.title);
+    // console.log(data.results[0].login.md5);
+  })
+  .catch((eror) => {
+    console.log("not ok");
+  });
