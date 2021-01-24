@@ -28,9 +28,24 @@ const searchCity = () => {
   const city = document.getElementById("city-input").value;
   getWeatherData(city)
     .then((response) => {
-      console.log(response);
+      // console.log(response);
+      showWeatherData(response);
     })
     .catch((error) => {
       console.log("Fetch Error :-S", error);
     });
+};
+
+/**
+ * Function To Show the weather data in HTML
+ */
+
+const showWeatherData = (weatherData) => {
+  document.getElementById("city-name").innerHTML = weatherData.name;
+  document.getElementById("weather-type").innerHTML =
+    weatherData.weather[0].main;
+  const { temp, temp_min, temp_max } = weatherData.main;
+  document.getElementById("temp").innerHTML = temp;
+  document.getElementById("min-temp").innerHTML = temp_min;
+  document.getElementById("max-temp").innerHTML = temp_max;
 };
