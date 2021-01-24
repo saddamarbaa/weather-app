@@ -1,17 +1,22 @@
-const userPromise = fetch("https://randomuser.me/api/");
-// console.log(userPromise);
-userPromise
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-    // data.results.forEach((element) => {
-    //   // console.log(element.name);
-    // });
-    // console.log(data.results[0].name.title);
-    // console.log(data.results[0].login.md5);
-  })
-  .catch((eror) => {
-    console.log("not ok");
-  });
+/**
+ * Weather App
+ * TODO: Complete getWeatherData() to return json response Promise
+ * TODO: Complete searchCity() to get user input and get data using getWeatherData()
+ * TODO: Complete showWeatherData() to set the data in the the html file from response
+ */
+
+// API_KEY for maps api
+let API_KEY = "a8e71c9932b20c4ceb0aed183e6a83bb";
+
+/**
+ * Retrieve weather data from openweathermap
+ * HINT: Use fetch()
+ * HINT: URL should look like this:
+ * https://api.openweathermap.org/data/2.5/weather?q=detroit&appid=a8e71c9932b20c4ceb0aed183e6a83bb&units=imperial
+ */
+getWeatherData = (city) => {
+  const URL = "https://api.openweathermap.org/data/2.5/weather";
+  //HINT: Use template literals to create a url with input and an API key
+
+  //CODE GOES HERE
+};
