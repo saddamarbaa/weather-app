@@ -1,7 +1,7 @@
 ## Weather app
 
 This is a code repository for the project: weather app with vanilla JavaScript 
-in this project I learned more about ES6+, promises, Fetching data from an API
+in this project I learned more about ES6+, promises, Fetching data from an API.
 
 #### Click the link blow to see the [GitHub Pages]: (https://saddamarbaa.github.io/weather-app/)
 
